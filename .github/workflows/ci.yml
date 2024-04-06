@@ -1,0 +1,14 @@
+name: ci
+on: push
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: depot/setup-action@v1
+      - uses: depot/build-push-action@v1
